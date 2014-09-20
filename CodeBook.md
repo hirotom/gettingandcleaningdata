@@ -6,7 +6,7 @@ Definition of input/output variables for run_analysis.R
 
 # Inputs
 
-Following files are required to be in the working directory to execute run_analysis.R script in R.
+Following files from the data source for this project are required to be in the working directory to execute run_analysis.R script in R.
 * features.txt
 * activity_labels.txt
 * X_test.txt
