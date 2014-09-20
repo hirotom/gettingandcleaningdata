@@ -16,8 +16,13 @@ Following files from the data source zip file for this project are required to b
 * Y_train.txt
 * subject_train.txt
 
-The descriptions (code book) for above input files are also in the data source (see README.txt in the data source zip file )
+The descriptions (code book) for above input files are also in the data source (see README.txt in the data source zip file ).
 
 # Output
 
 This run_analysis.R script will output a file named "tidydata_out.txt" in the working directory.
+
+## Descriptions of columns in "tidydata_out.txt"
+* activity_name
+* subject_id
+* 
