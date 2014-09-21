@@ -23,8 +23,8 @@ The descriptions (code book) for above input files are also in the data source (
 This run_analysis.R script will output a file named "tidydata_out.txt" in the working directory.
 
 ## Descriptions of columns in "tidydata_out.txt"
-* activity_name
-* subject_id
+1. activity_name
+2. subject_id
 * tBodyAcc-std()-Z
 * tGravityAcc-mean()-X
 * tGravityAcc-mean()-Y
@@ -99,6 +99,3 @@ This run_analysis.R script will output a file named "tidydata_out.txt" in the wo
 * fBodyBodyGyroJerkMag-mean()
 * fBodyBodyGyroJerkMag-std()
 * fBodyBodyGyroJerkMag-meanFreq()
-* fBodyBodyGyroJerkMag-mean().1
-* fBodyBodyGyroJerkMag-std().1
-* fBodyBodyGyroJerkMag-meanFreq().1
