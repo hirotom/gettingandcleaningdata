@@ -3,7 +3,7 @@
 # 2014.09.13
 
 
-# Get data labels
+# [1] Get data labels
 
     # features.txt provides column names for X_test.txt and X_train.txt
     features.data = read.table("features.txt")
@@ -12,7 +12,7 @@
     # Y_test.txt and Y_train.txt to names of each activity
     activity_labels.data = read.table("activity_labels.txt")
 
-# Put together data for test set
+# [2] Put together data for test set
 
     # read test data sets (X_test.txt, Y_test.txt, subject_test.txt)
     X_test.data = read.table("X_test.txt")
@@ -37,7 +37,7 @@
     # free up memory
     rm(X_test.data, Y_test.data, subject_test.data)
     
-# Put together data for train set
+# [3] Put together data for train set
     
     # read test data sets (X_train.txt, Y_train.txt, subject_train.txt)
     X_train.data = read.table("X_train.txt")
@@ -62,14 +62,14 @@
     # free up memory
     rm(X_train.data, Y_train.data, subject_train.data)
 
-# Merge the training and the test sets to create one data set
+# [4] Merge the training and the test sets to create one data set
     
     merged.data = rbind(test.data, train.data)
     
     # free up memory
     rm(train.data, test.data)
     
-# Extract only the measurements on the mean and standard deviation for each measurement.
+# [5] Extract only the measurements on the mean and standard deviation for each measurement.
     
     col_subset = c(563,564) # activity_name, subject_id
     col_subset = c(col_subset, 1,2,3,4,5,6) # tBodyAccu
@@ -92,7 +92,7 @@
     
     merged.subset = merged.data[,col_subset]
     
-# Create a second, independent tidy data set with the average of each variable for each activity and each subject.
+# [6] Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
     merged.tidy = aggregate(. ~ activity_name+subject_id, merged.subset, mean)
     
