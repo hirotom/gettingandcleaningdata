@@ -28,6 +28,7 @@ Good luck!
 # run_analysis.R script
 
 Below describes the program flow:
+
 1. Get data labels
 2. Tidy the TEST data set
 3. Tidy the TRAIN data set
