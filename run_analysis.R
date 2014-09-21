@@ -82,14 +82,13 @@
     col_subset = c(col_subset, 227,228) #tBodyAccJerkMag
     col_subset = c(col_subset, 240,241) #tBodyGyroMag
     col_subset = c(col_subset, 253,254) #tBodyGyroJerkMag
-    col_subset = c(col_subset, 266,267,268,269,270,271,294,295,296) #fBodyAcc
-    col_subset = c(col_subset, 345,346,347,348,349,350,373,374,375) #fBodyAccJerk
-    col_subset = c(col_subset, 424,425,426,427,428,429,452,453,454) #fBodyGyro
-    col_subset = c(col_subset, 503,504,513) #fBodyAccMag
-    col_subset = c(col_subset, 516,517,526) #fBodyBodyAccJerkMag
-    col_subset = c(col_subset, 529,530,539) #fBodyBodyGyroMag
-    col_subset = c(col_subset, 542,543,552) #fBodyBodyGyroJerkMag    
-    col_subset = c(col_subset, 542,543,552) #fBodyBodyGyroJerkMag    
+    col_subset = c(col_subset, 266,267,268,269,270,271) #fBodyAcc
+    col_subset = c(col_subset, 345,346,347,348,349,350) #fBodyAccJerk
+    col_subset = c(col_subset, 424,425,426,427,428,429) #fBodyGyro
+    col_subset = c(col_subset, 503,504) #fBodyAccMag
+    col_subset = c(col_subset, 516,517) #fBodyBodyAccJerkMag
+    col_subset = c(col_subset, 529,530) #fBodyBodyGyroMag
+    col_subset = c(col_subset, 542,543) #fBodyBodyGyroJerkMag    
     
     merged.subset = merged.data[,col_subset]
     
