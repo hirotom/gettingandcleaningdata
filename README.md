@@ -24,3 +24,13 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Good luck!
+
+# run_analysis.R script
+
+Below describes the program flow:
+1. Get data labels
+2. Tidy the TEST data set
+3. Tidy the TRAIN data set
+4. Merge the TEST and TRAIN data sets
+5. Subset the merged data to only extract mean() and std() columns (along with activity name and subject id)
+6. Calculate the average of the subset data, sort, and output to text file
