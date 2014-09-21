@@ -22,9 +22,9 @@ The descriptions (code book) for above input files are also in the data source (
 
 This script (run_analysis.R) will output a file named "tidydata_out.txt" in the working directory.
 
-The output data contains average values grouped by activity name (col. 1) and subject id (co. 2) for each measurement values (cols. 3 to 68). 
+The output data contains average values grouped by activity name (col. 1) and subject id (col. 2) for each measurement values (cols. 3 to 68). 
 
-## Descriptions of columns in "tidydata_out.txt"
+### Descriptions of columns in "tidydata_out.txt"
 
 1. activity_name: Possible activities are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING.
 
