@@ -29,9 +29,37 @@ Good luck!
 
 Below describes the program flow:
 
-1. Get data labels
-2. Tidy the TEST data set
-3. Tidy the TRAIN data set
-4. Merge the TEST and TRAIN data sets
-5. Subset the merged data to only extract mean() and std() columns (along with activity name and subject id)
-6. Calculate the average of the subset data, sort, and output to text file
+###1. Get data labels
+Read "features.txt" and "activity_labels.txt."
+
+###2. Tidy the TEST data set
+Read "X_test.txt," "Y_test.txt," then apply column names, merge activity labels based on activity id.  
+
+###3. Tidy the TRAIN data set
+Read "X_train.txt," "Y_train.txt," then apply column names, merge activity labels based on activity id.  
+
+###4. Merge the TEST and TRAIN data sets
+Row bind the TEST and TRAIN data sets
+
+###5. Subset the merged data to only extract mean() and std() columns (along with activity name and subject id)
+Hand pick the columns that contain desired data (only mean() and std() columns) and subset the data from step 4
+Columns 1,2,3,4,5,6 contained tBodyAccu (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 41,42,43,44,45,46 contained tGravityAcc (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 81,82,83,84,85,86 contained tBodyAccJerk (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 121,122,123,124,125,126 contained tBodyGyro (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 161,162,163,164,165,166 contained tBodyGyroJerk (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 201,202 contained tBodyAccMag (mean(),std())
+Columns 214,215 contained tGravityAccMag (mean(),std())
+Columns 227,228 contained tBodyAccJerkMag (mean(),std())
+Columns 240,241 contained tBodyGyroMag (mean(),std())
+Columns 253,254 contained tBodyGyroJerkMag (mean(),std())
+Columns 266,267,268,269,270,271 contained fBodyAcc (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 345,346,347,348,349,350 contained fBodyAccJerk (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 424,425,426,427,428,429 contained fBodyGyro (mean()-X, mean()-Y, mean()-Z, std()-X, std()-Y, std()-Z)
+Columns 503,504 contained fBodyAccMag (mean(),std())
+Columns 516,517 contained fBodyBodyAccJerkMag (mean(),std())
+Columns 529,530 contained fBodyBodyGyroMag (mean(),std())
+Columns 542,543 contained fBodyBodyGyroJerkMag (mean(),std()) 
+
+
+###6. Calculate the average of the subset data, sort, and output to text file
