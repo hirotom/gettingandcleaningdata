@@ -25,7 +25,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 Good luck!
 
-# run_analysis.R script
+# Program Flow: run_analysis.R
 
 Below describes the program flow:
 
