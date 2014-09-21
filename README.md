@@ -30,16 +30,16 @@ Good luck!
 Below describes the program flow:
 
 ###1. Get data labels
-Read "features.txt" and "activity_labels.txt."
+Used read.table() to read "features.txt" and "activity_labels.txt."
 
 ###2. Tidy the TEST data set
-Read "X_test.txt," "Y_test.txt," then apply column names, merge activity labels based on activity id.  
+Used read.table() to read "X_test.txt," "Y_test.txt," then apply column names, merge activity labels based on activity id.  
 
 ###3. Tidy the TRAIN data set
-Read "X_train.txt," "Y_train.txt," then apply column names, merge activity labels based on activity id.  
+Used read.table() to read "X_train.txt," "Y_train.txt," then apply column names, merge activity labels based on activity id.  
 
 ###4. Merge the TEST and TRAIN data sets
-Row bind the TEST and TRAIN data sets
+Used rbind() to merge the TEST and TRAIN data sets
 
 ###5. Subset the merged data to only extract mean() and std() columns (along with activity name and subject id)
 Hand pick the columns that contain desired data (only mean() and std() columns) and subset the data from step 4
@@ -61,5 +61,7 @@ Hand pick the columns that contain desired data (only mean() and std() columns) 
 * Columns 529,530 contained fBodyBodyGyroMag (mean(),std())
 * Columns 542,543 contained fBodyBodyGyroJerkMag (mean(),std()) 
 
-
 ###6. Calculate the average of the subset data, sort, and output to text file
+* Used aggregate() to calculate the mean grouped by activity name and subject id.
+* Sorted the output by activity name, then by subject_id using order()
+* Output data using write.table() to file "tidydata_out.txt"
